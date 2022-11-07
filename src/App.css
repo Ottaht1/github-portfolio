@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -35,4 +39,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  width: 40%;
+  border: #61dafb solid;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 2% 0 0 30%;
+}
+
+.card h2 {
+  width: 70%;
+}
+
+.card .stars {
+  display: inline-flex;
+  flex-direction: row;
+  width: 20%;
+  font-size: larger;
 }
