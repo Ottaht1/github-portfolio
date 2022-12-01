@@ -39,9 +39,6 @@ function App() {
             name={repo.name}
             stars={repo.stargazers_count}
             status={repo.language || "JavaScript"}
-            onClick={() => {
-              alert("hello");
-            }}
           />
         ))}
     </div>
