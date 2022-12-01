@@ -22,7 +22,7 @@ function App() {
   const fetchRepos = async () => {
     const response = await fetch("https://api.github.com/user/repos", {
       headers: new Headers({
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
       }),
     }).then((res) => res.json());
     setRepos(response);
