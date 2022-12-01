@@ -37,8 +37,8 @@ function App() {
         repos.map((repo) => (
           <Card
             name={repo.name}
-            stars={repo.open_issues}
-            status={repo.language}
+            stars={repo.stargazers_count}
+            status={repo.language || "JavaScript"}
             onClick={() => {
               alert("hello");
             }}
