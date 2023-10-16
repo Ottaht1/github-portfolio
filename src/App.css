@@ -1,3 +1,4 @@
+/* General styles for the application */
 .App {
   text-align: center;
   display: flex;
@@ -6,6 +7,7 @@
   margin: 0 auto;
 }
 
+Logo animation
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -17,6 +19,7 @@
   }
 }
 
+/* Header styling */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,24 +31,14 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-a {
+/* Shared link styles */
+.App-link, a {
   color: inherit;
   text-decoration: none;
   background-color: cadetblue;
 }
 
+/* Styling for cards */
 .card {
   width: 40%;
   border: cadetblue solid;
@@ -66,29 +59,23 @@ a {
   font-size: larger;
 }
 
-.error-404 {
+/* Error styles */
+.error-404, .error-boundary {
   margin: 15% auto;
 }
 
-.error-boundary {
-  margin: 15% auto;
-}
-
-.error-404 h1 {
+.error-404 h1, .error-boundary h1 {
   color: red;
   font-style: italic;
   font-size: 800%;
 }
 
-.error-boundary h1 {
-  color: red;
-  font-style: italic;
-}
-
+/* Main repo container */
 .main-repo-container {
   margin: 4% auto;
 }
 
+/* Profile container */
 .profile-container {
   display: flex;
   justify-content: space-between;
@@ -96,19 +83,13 @@ a {
   padding: 20px;
 }
 
-.profile-info {
+.profile-info, .repo-container {
   flex: 1;
-  max-width: 50%;
-  padding-right: 20px;
+  padding: 20px;
 }
 
-.repo-container {
-  flex: 1;
-  max-width: 500%;
-  padding-left: 20px;
-}
-
-.back-to-home-page-button {
+/* Back buttons */
+.back-to-home-page-button, .back-to-profile-button, .view-repositories-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -120,15 +101,11 @@ a {
   cursor: pointer;
 }
 
-.back-to-home-page-button:hover {
+.back-to-home-page-button:hover, .back-to-profile-button:hover, .view-repositories-button:hover {
   background-color: cadetblue;
 }
 
-.back-to-home-page-button span {
-  position: relative;
-  top: -2px;
-}
-
+/* Additional info styles */
 .additional-info {
   text-align: center;
   width: 45%;
@@ -138,44 +115,38 @@ a {
   background-color: #f5f5f5;
 }
 
-.view-repositories-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #282c34;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+/* Limit the width of the email paragraph on smaller screens */
+.additional-info p a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  text-align: center;
 }
 
-.view-repositories-button:hover {
-  background-color: cadetblue;
+/* Responsive styles for screens */
+@media (max-width: 600px) {
+  .profile-container {
+    flex-direction: column;
+  }
+  
+  /* Adjust the width of the single repo card and center-align text on small screens */
+  .card {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
-.view-repositories-button span {
-  position: relative;
-  top: -2px;
-}
-
-.back-to-profile-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #282c34;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.back-to-profile-button:hover {
-  background-color: cadetblue;
-}
-
-.back-to-profile-button span {
-  position: relative;
-  top: -2px;
+@media (min-width: 601px) {
+  .profile-container {
+    flex-direction: row;
+  }
+  
+  /* Adjust the width of the repo list container on larger screens */
+  .repo-container, .card-container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
