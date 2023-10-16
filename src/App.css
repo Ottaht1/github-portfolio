@@ -43,17 +43,16 @@
 a {
   color: inherit;
   text-decoration: none;
+  background-color: cadetblue;
 }
 
 .card {
   width: 40%;
-  border: #61dafb solid;
+  border: cadetblue solid;
   color: black;
   font-family: "Courier New", Courier, monospace;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 2% 0 0 12%;
+  display: inline-block;
+  margin: 2% 2% 0 0;
 }
 
 .card h2 {
@@ -78,6 +77,7 @@ a {
 .error-404 h1 {
   color: red;
   font-style: italic;
+  font-size: 800%;
 }
 
 .error-boundary h1 {
@@ -85,15 +85,97 @@ a {
   font-style: italic;
 }
 
-.repo-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.repo-container a {
-  margin: 2% 0 0 2%;
-}
-
 .main-repo-container {
   margin: 4% auto;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.profile-info {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.repo-container {
+  flex: 1;
+  max-width: 500%;
+  padding-left: 20px;
+}
+
+.back-to-home-page-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #282c34;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-to-home-page-button:hover {
+  background-color: cadetblue;
+}
+
+.back-to-home-page-button span {
+  position: relative;
+  top: -2px;
+}
+
+.additional-info {
+  text-align: center;
+  width: 45%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.view-repositories-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #282c34;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-repositories-button:hover {
+  background-color: cadetblue;
+}
+
+.view-repositories-button span {
+  position: relative;
+  top: -2px;
+}
+
+.back-to-profile-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #282c34;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-to-profile-button:hover {
+  background-color: cadetblue;
+}
+
+.back-to-profile-button span {
+  position: relative;
+  top: -2px;
 }

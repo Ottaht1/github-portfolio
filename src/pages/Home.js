@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
-import About from './About';
+import About from "./About";
 
 export default function Home() {
   return (
@@ -10,14 +9,12 @@ export default function Home() {
       <HashLink
         to="#about"
         smooth
-        scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+        scroll={(el) => el.scrollIntoView({ behavior: "auto", block: "end" })}
       >
         About Inside Home
       </HashLink>
-      {/* ;<a href="#about">About Inside Home</a> */}
-      <section style={{ marginBottom: '500px' }}>
-       My github repository
-      </section>
+
+      <section style={{ marginBottom: "500px" }}>My github repository</section>
       <About isHome />
     </div>
   );
